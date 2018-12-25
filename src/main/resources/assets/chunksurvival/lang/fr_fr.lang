@@ -1,0 +1,8 @@
+generator.chunk_survival=Chunk Survival
+chunk_survival.customize.title=Personnaliser la génération de Chunk Survival
+chunk_survival.customize.size=Taille des groupes de chunk
+chunk_survival.customize.spacing=Espacement
+chunk_survival.customize.lava=Lave au fond
+chunk_survival.customize.randomChunks=Disposition aléatoire
+chunk_survival.customize.chunkGrid=Grille de chunks
+chunk_survival.customize.probability=Probabilité
