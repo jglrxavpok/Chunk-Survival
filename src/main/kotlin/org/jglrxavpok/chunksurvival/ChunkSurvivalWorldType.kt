@@ -7,6 +7,7 @@ import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiCreateWorld
 import net.minecraft.world.World
 import net.minecraft.world.WorldType
+import net.minecraft.world.biome.BiomeProvider
 import net.minecraft.world.gen.IChunkGenerator
 import org.jglrxavpok.chunksurvival.client.GuiCustomizeChunkSurvival
 
@@ -44,6 +45,10 @@ object ChunkSurvivalWorldType: WorldType("chunk_survival") {
 
     override fun getChunkGenerator(world: World, generatorOptions: String): IChunkGenerator {
         return ChunkGeneratorChunkSurvival(world, world.seed, world.worldInfo.isMapFeaturesEnabled, generatorOptions)
+    }
+
+    override fun getBiomeProvider(world: World?): BiomeProvider {
+        return super.getBiomeProvider(world)
     }
 
     override fun isCustomizable(): Boolean {

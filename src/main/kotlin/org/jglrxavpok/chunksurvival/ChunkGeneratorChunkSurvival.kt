@@ -20,10 +20,22 @@ class ChunkGeneratorChunkSurvival(val worldIn: World, seed: Long, mapFeaturesEna
         if(options.randomChunks) {
             return Math.random() < options.probability
         }
-        val width = options.clusterSize+options.spacing
-        val xIndex = Math.abs(x)%width
-        val zIndex = Math.abs(z)%width
-        return xIndex < options.clusterSize && zIndex < options.clusterSize
+        var xOffset = x
+        var zOffset = z
+        val width = options.spacing+options.clusterSize
+
+        // avoid duplication near 0 coordinates
+        if(xOffset < 0) {
+            xOffset = -xOffset + options.clusterSize
+        }
+        if(zOffset < 0) {
+            zOffset = -zOffset + options.clusterSize
+        }
+
+        xOffset %= width
+        zOffset %= width
+
+        return xOffset < options.clusterSize && zOffset < options.clusterSize
     }
 
     override fun generateChunk(x: Int, z: Int): Chunk {

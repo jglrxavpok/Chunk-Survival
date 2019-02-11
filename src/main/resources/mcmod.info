@@ -8,8 +8,8 @@
   "url": "https://minecraft.curseforge.com/projects/chunk-survival",
   "updateUrl": "https://raw.githubusercontent.com/jglrxavpok/Chunk-Survival/master/updateCheck.json",
   "authorList": ["jglrxavpok"],
-  "credits": "",
-  "logoFile": "",
+  "credits": "BlitZEcho for the idea",
+  "logoFile": "assets/chunksurvival/logo.png",
   "screenshots": [],
   "dependencies": []
 }

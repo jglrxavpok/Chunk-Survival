@@ -81,7 +81,7 @@ class GuiCustomizeChunkSurvival(val parent: GuiCreateWorld, val optionsJson: Str
         when(button) {
             cancelButton -> mc.displayGuiScreen(parent)
             doneButton -> {
-                options.clusterSize = spacingSlider.valueInt
+                options.clusterSize = sizeSlider.valueInt
                 options.spacing = spacingSlider.valueInt
                 options.spawnLava = lavaCheckbox.isChecked
                 options.probability = probabilitySlider.value/100.0
