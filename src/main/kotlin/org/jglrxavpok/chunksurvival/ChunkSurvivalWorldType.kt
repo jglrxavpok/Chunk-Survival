@@ -47,8 +47,8 @@ object ChunkSurvivalWorldType: WorldType("chunk_survival") {
         return ChunkGeneratorChunkSurvival(world, world.seed, world.worldInfo.isMapFeaturesEnabled, generatorOptions)
     }
 
-    override fun getBiomeProvider(world: World?): BiomeProvider {
-        return super.getBiomeProvider(world)
+    override fun getBiomeProvider(world: World): BiomeProvider {
+        return BiomeProviderChunkSurvival(world)
     }
 
     override fun isCustomizable(): Boolean {

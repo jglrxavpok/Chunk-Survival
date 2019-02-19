@@ -8,7 +8,7 @@ import org.apache.logging.log4j.Logger
 
 @Mod.EventBusSubscriber
 @Mod(modLanguageAdapter = "net.shadowfacts.forgelin.KotlinAdapter", modid = ChunkSurvival.ModID, dependencies = "required-after:forgelin;",
-        name = "Chunk Survival", version = "3.0", updateJSON = "https://raw.githubusercontent.com/jglrxavpok/Chunk-Survival/master/updateCheck.json")
+        name = "Chunk Survival", version = "1.0.1", updateJSON = "https://raw.githubusercontent.com/jglrxavpok/Chunk-Survival/master/updateCheck.json")
 object ChunkSurvival {
 
 
